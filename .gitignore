@@ -3,3 +3,4 @@ backend/.idea
 backend/.vercel
 backend/node_modules/*
 backend/.env
+backend/localdata
