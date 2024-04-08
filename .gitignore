@@ -1,4 +1,4 @@
 .idea/
 backend/.idea
 backend/.vercel
-backend/node_modules
+backend/node_modules/*
