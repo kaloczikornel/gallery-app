@@ -1,10 +1,26 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const setupRoutes = require('./routes');
+const { PORT } = require('../config');
 
-app.use(cors({
-    origin: 'https://gallery-app-wheat.vercel.app'
-}));
-app.get("/", (req, res) => res.send("Express on Vercel"));
+async function main() {
+    const app = express();
 
-app.listen(5000, () => console.log("Server ready on port 5000."));
+    app.use(
+        cors({
+            origin: 'https://gallery-app-wheat.vercel.app'
+        })
+    );
+    app.use(express.json());
+    setupRoutes(app);
+
+    app.listen(PORT || 5000, () =>
+        console.log(`Listening on: ${PORT || 5000}`)
+    );
+}
+
+main().catch(err => {
+    console.error('Unexpected error:', err);
+    process.exitCode = 1;
+});
