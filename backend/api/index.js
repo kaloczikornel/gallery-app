@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 
 app.use(cors({
-    origin: 'https://backend-phi-three-73.vercel.app/'
+    origin: 'https://gallery-app-wheat.vercel.app/'
 }));
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
