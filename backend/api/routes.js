@@ -1,4 +1,4 @@
-const { prisma } = require('./db/db');
+const { prisma } = require('../db/db');
 const getUser = require('./middlewares/user/getUser');
 const routes = app => {
     const objRepo = { prisma };
