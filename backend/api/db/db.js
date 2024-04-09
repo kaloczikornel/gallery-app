@@ -1,7 +1,6 @@
-const { PrismaClient } = require('@prisma/client')
+const { PrismaClient } = require('@prisma/client');
+const { POSTGRES_PRISMA_URL } = require('../../config');
 
-const connectionString = `${process.env.DATABASE_URL}`
+const prisma = new PrismaClient({ datasourceUrl: POSTGRES_PRISMA_URL });
 
-const prisma = new PrismaClient({ datasourceUrl: connectionString })
-
-module.exports = { prisma }
+module.exports = { prisma };
