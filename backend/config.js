@@ -9,3 +9,5 @@ function parseEnvNumber(paramName, defaultValue) {
 module.exports.PORT = parseEnvNumber('PORT', 4000);
 
 module.exports.POSTGRES_PRISMA_URL = process.env.POSTGRES_PRISMA_URL;
+
+module.exports.VERCEL_ENV = process.env.VERCEL_ENV;
