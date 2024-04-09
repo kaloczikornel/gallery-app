@@ -1,0 +1,14 @@
+DB:
+    - Users
+        - id
+        - name
+        - email
+        - password (hashed)
+        - created_at
+        - updated_at
+    - Photos
+        - id
+        - user_id
+        - url
+        - created_at
+        - updated_at
