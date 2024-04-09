@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const setupRoutes = require('./routes');
-const { PORT, VERCEL_ENV } = require('../config');
+const { PORT, VERCEL_ENV } = require('./config');
 
 async function main() {
     const app = express();
